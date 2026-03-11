@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "NXT Medical"
+version = "1.0.0"
+id = "artifacts/nxt-medical"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 22692
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/nxt-medical run dev"
+
+[services.env]
+PORT = "22692"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/nxt-medical", "run", "build"]
+publicDir = "artifacts/nxt-medical/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

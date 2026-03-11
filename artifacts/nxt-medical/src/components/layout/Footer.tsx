@@ -1,0 +1,97 @@
+import { Link } from "wouter";
+import { siteConfig, footerLinks, ctas } from "@/content/site";
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-950 text-gray-400">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Brand */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-7 h-7 bg-primary rounded-md flex items-center justify-center">
+                <span className="text-white font-bold text-xs tracking-tight">NXT</span>
+              </div>
+              <span className="font-semibold text-white text-sm tracking-tight">NXT Medical</span>
+            </div>
+            <p className="text-sm leading-relaxed text-gray-500 max-w-sm">
+              Remote patient care programs built for medical practices. Hands-on implementation,
+              clinical staffing, and ongoing support — so your team can focus on care.
+            </p>
+            <div className="mt-6 flex flex-col gap-1 text-sm">
+              <span className="text-gray-500">
+                Phone:{" "}
+                <span className="text-gray-400">{siteConfig.contact.phone}</span>
+              </span>
+              <span className="text-gray-500">
+                Email:{" "}
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {siteConfig.contact.email}
+                </a>
+              </span>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">
+              Services
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-500 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wide">
+              Company
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.company.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-500 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8">
+              <Link
+                href="/contact#demo"
+                className="inline-block px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
+              >
+                {ctas.bookDemo}
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-gray-600">
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          </p>
+          <p className="text-xs text-gray-600">
+            Remote Patient Monitoring &bull; Chronic Care Management &bull; Remote Therapeutic
+            Monitoring
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}

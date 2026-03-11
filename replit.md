@@ -21,7 +21,8 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 ```text
 artifacts-monorepo/
 ├── artifacts/              # Deployable applications
-│   └── api-server/         # Express API server
+│   ├── api-server/         # Express API server
+│   └── nxt-medical/        # NXT Medical marketing website (React + Vite)
 ├── lib/                    # Shared libraries
 │   ├── api-spec/           # OpenAPI spec + Orval codegen config
 │   ├── api-client-react/   # Generated React Query hooks
@@ -34,6 +35,58 @@ artifacts-monorepo/
 ├── tsconfig.json           # Root TS project references
 └── package.json            # Root package with hoisted devDeps
 ```
+
+## NXT Medical Marketing Site
+
+### Overview
+
+Static marketing website for NXT Medical's remote patient care division.
+Located at `artifacts/nxt-medical/`. Served at the root path `/`.
+
+### Tech Stack
+
+- React 18 + Vite 7 + TypeScript
+- Tailwind CSS v4
+- Wouter (client-side routing)
+- react-helmet-async (SEO)
+- Lucide React (icons)
+- No backend needed — pure frontend/static
+
+### Key Files
+
+- `src/content/site.ts` — Nav, footer links, CTA labels, contact info
+- `src/content/services.ts` — RPM, CCM, RTM service content
+- `src/content/faqs.ts` — FAQ content per page
+- `src/content/forms.ts` — GoHighLevel form embed placeholders
+- `src/App.tsx` — Router with all 7 pages
+- `src/index.css` — Design system tokens (colors, typography, radius)
+- `HANDOFF.md` — Full agent handoff documentation
+
+### Pages
+
+| Route | File |
+|-------|------|
+| `/` | `src/pages/home.tsx` |
+| `/remote-care` | `src/pages/remote-care.tsx` |
+| `/rpm` | `src/pages/rpm.tsx` |
+| `/ccm` | `src/pages/ccm.tsx` |
+| `/rtm` | `src/pages/rtm.tsx` |
+| `/about` | `src/pages/about.tsx` |
+| `/contact` | `src/pages/contact.tsx` |
+
+### Reusable Components
+
+All section components in `src/components/sections/`:
+- `Hero` — Dark hero with headline/CTAs
+- `ServiceCard` — RPM/CCM/RTM card
+- `FAQSection` — Accordion FAQ
+- `FormEmbed` — GHL form wrapper
+- `CTABand` — Bottom CTA strip
+- `BenefitsGrid` — Benefit item grid
+- `ProcessSteps` — Numbered steps
+- `TrustStrip` — Value strip (homepage)
+
+Layout in `src/components/layout/`: `Header`, `Footer`.
 
 ## TypeScript & Composite Projects
 
@@ -49,6 +102,17 @@ Every package extends `tsconfig.base.json` which sets `composite: true`. The roo
 - `pnpm run typecheck` — runs `tsc --build --emitDeclarationOnly` using project references
 
 ## Packages
+
+### `artifacts/nxt-medical` (`@workspace/nxt-medical`)
+
+NXT Medical marketing website. Frontend-only React + Vite application.
+- Entry: `src/main.tsx`
+- App: `src/App.tsx` — routing and layout wrapper
+- Content: `src/content/` — centralized copy/config files
+- Components: `src/components/sections/` and `src/components/layout/`
+- Pages: `src/pages/`
+- `pnpm --filter @workspace/nxt-medical run dev` — dev server
+- `pnpm --filter @workspace/nxt-medical run build` — static build
 
 ### `artifacts/api-server` (`@workspace/api-server`)
 
