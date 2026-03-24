@@ -71,12 +71,25 @@ export default function Hero({
             </Link>
           )}
           {secondaryCta && (
-            <Link
-              href={secondaryCta.href}
-              className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-gray-300 border border-gray-700 hover:border-gray-500 hover:text-white rounded-lg transition-colors"
-            >
-              {secondaryCta.label}
-            </Link>
+            secondaryCta.href.startsWith("#") ? (
+              <a
+                href={secondaryCta.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector(secondaryCta.href)?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-gray-300 border border-gray-700 hover:border-gray-500 hover:text-white rounded-lg transition-colors text-center cursor-pointer"
+              >
+                {secondaryCta.label}
+              </a>
+            ) : (
+              <Link
+                href={secondaryCta.href}
+                className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-gray-300 border border-gray-700 hover:border-gray-500 hover:text-white rounded-lg transition-colors"
+              >
+                {secondaryCta.label}
+              </Link>
+            )
           )}
         </div>
       </div>
