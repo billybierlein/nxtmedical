@@ -87,7 +87,8 @@ export default function Header() {
             <img
               src={`${import.meta.env.BASE_URL}images/nxt-logo.png`}
               alt="NXT Medical"
-              className="h-14 w-auto"
+              className="w-auto"
+              style={{ height: "48px" }}
             />
           </Link>
 
