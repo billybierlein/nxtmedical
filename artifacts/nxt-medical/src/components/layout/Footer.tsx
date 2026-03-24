@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="mb-4 -mt-2 -ml-3">
+            <div className="mb-4">
               <img
                 src={`${import.meta.env.BASE_URL}images/nxt-logo.png`}
                 alt="NXT Medical"
