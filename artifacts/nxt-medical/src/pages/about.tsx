@@ -28,18 +28,6 @@ const coreValues = [
   },
 ];
 
-const whatWeHandle = [
-  "Program enrollment and patient consent",
-  "Device procurement, shipping, and patient setup",
-  "Daily clinical monitoring and data review",
-  "Threshold-based escalation protocols",
-  "Care plan creation and ongoing management",
-  "Monthly patient outreach and coordination",
-  "Therapy adherence tracking and coaching",
-  "CMS-compliant time logging and documentation",
-  "Billing support and reimbursement guidance",
-  "Ongoing practice reporting and performance review",
-];
 
 export default function AboutPage() {
   return (
@@ -69,34 +57,54 @@ export default function AboutPage() {
                 Why NXT Medical Exists
               </h2>
               <p className="mt-4 text-gray-500 text-base leading-relaxed">
-                Remote patient monitoring and care management programs create real value for
-                patients and providers — but most practices never successfully implement them.
-                The reason isn't desire or intent. It's operational burden.
+                Healthcare is evolving quickly — but most providers don't have the time, clarity, or internal resources to keep up with new care models, compliance requirements, and patient engagement strategies.
               </p>
               <p className="mt-4 text-gray-500 text-base leading-relaxed">
-                Practices that try to build remote care programs internally often run into the
-                same wall: not enough staff time, unclear documentation requirements, and
-                uncertain billing processes. Programs get started, then quietly abandoned.
+                It's not a lack of interest that holds practices back — it's the complexity of execution.
               </p>
               <p className="mt-4 text-gray-500 text-base leading-relaxed">
-                NXT Medical exists to solve that problem. We provide everything a practice needs
-                to run RPM, CCM, and RTM programs — without requiring internal staff to absorb
-                the operational load. We are your remote care department.
+                Many providers attempt to implement new programs or services on their own and run into the same challenges: unclear processes, administrative burden, staffing limitations, and uncertainty around documentation and reimbursement. Initiatives start with good intent, but often stall or never reach their full potential.
+              </p>
+              <p className="mt-4 text-gray-500 text-base leading-relaxed font-medium text-gray-700">
+                NXT Medical exists to solve that problem.
+              </p>
+              <p className="mt-4 text-gray-500 text-base leading-relaxed">
+                We act as a strategic partner to healthcare providers — helping identify opportunities for growth, improve patient outcomes, and implement programs the right way from day one.
+              </p>
+              <p className="mt-4 text-gray-500 text-base leading-relaxed font-medium text-gray-700">
+                Our role is to simplify what is typically overwhelming.
               </p>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8">
-              <h3 className="font-semibold text-gray-900 text-base mb-5">
-                What We Handle Directly
-              </h3>
-              <ul className="space-y-3">
-                {whatWeHandle.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <CheckCircle2 size={15} className="text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-500 text-sm leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="space-y-8">
+              <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8">
+                <h3 className="font-semibold text-gray-900 text-base mb-5">
+                  We work alongside your team to:
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    "Identify the right programs and services for your patient population",
+                    "Handle operational complexity and compliance requirements",
+                    "Support patient engagement, adherence, and outcomes",
+                    "Provide ongoing guidance, reporting, and optimization",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <CheckCircle2 size={15} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-500 text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8">
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  At the same time, we stay focused on what matters most — the patient experience.
+                  Our systems and support ensure patients remain engaged, supported, and progressing throughout their care journey.
+                </p>
+                <p className="mt-4 text-gray-900 text-sm font-semibold leading-relaxed">
+                  The result: Stronger patient outcomes, new revenue opportunities, and a partner you can rely on to execute — not just advise.
+                </p>
+              </div>
             </div>
           </div>
         </div>
