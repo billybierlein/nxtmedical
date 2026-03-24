@@ -107,7 +107,7 @@ export default function ForChiropractorsPage() {
       />
 
       {/* Hero supporting bullets */}
-      <section className="bg-gray-950 pb-10 -mt-2">
+      <section className="bg-gray-950 pb-14 pt-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           {[
             "No added staff required",
