@@ -9,11 +9,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-7 h-7 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-xs tracking-tight">NXT</span>
-              </div>
-              <span className="font-semibold text-white text-sm tracking-tight">NXT Medical</span>
+            <div className="mb-4">
+              <img
+                src={`${import.meta.env.BASE_URL}images/nxt-logo.png`}
+                alt="NXT Medical"
+                className="h-10 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-sm leading-relaxed text-gray-500 max-w-sm">
               Helping medical practices improve patient outcomes and unlock new revenue — through expert implementation, operational support, and ongoing patient engagement.
