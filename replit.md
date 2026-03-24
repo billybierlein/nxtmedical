@@ -73,6 +73,8 @@ Located at `artifacts/nxt-medical/`. Served at the root path `/`.
 | `/rtm` | `src/pages/rtm.tsx` |
 | `/about` | `src/pages/about.tsx` |
 | `/contact` | `src/pages/contact.tsx` |
+| `/for-chiropractors` | `src/pages/for-chiropractors.tsx` |
+| `/who-we-serve` | `src/pages/who-we-serve.tsx` |
 
 ### Reusable Components
 
@@ -85,8 +87,13 @@ All section components in `src/components/sections/`:
 - `BenefitsGrid` — Benefit item grid
 - `ProcessSteps` — Numbered steps
 - `TrustStrip` — Value strip (homepage)
+- `GoogleSchedulingButton` — Google Calendar appointment scheduling button (renders on all "Book a Demo" CTAs)
 
 Layout in `src/components/layout/`: `Header`, `Footer`.
+
+### Google Calendar Scheduling
+
+All "Book a Demo" buttons use the `GoogleSchedulingButton` component (`src/components/GoogleSchedulingButton.tsx`), which loads Google's scheduling button script and renders an inline booking widget. The scheduling URL is hardcoded in the component. The contact page also has a full calendar iframe embed for inline appointment scheduling. The `ctas.bookDemoHref` in `src/content/site.ts` stores the short sharing link for fallback use.
 
 ## TypeScript & Composite Projects
 

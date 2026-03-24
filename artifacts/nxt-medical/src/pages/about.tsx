@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Hero from "@/components/sections/Hero";
 import CTABand from "@/components/sections/CTABand";
+import GoogleSchedulingButton from "@/components/GoogleSchedulingButton";
 import { ctas } from "@/content/site";
 import { CheckCircle2 } from "lucide-react";
 
@@ -56,7 +57,6 @@ export default function AboutPage() {
         badge="About NXT Medical"
         headline="A Hands-On Remote Care Partner"
         subheadline="NXT Medical was built to solve the operational gap that stops most practices from running successful remote care programs — by providing the clinical staff and infrastructure to run them directly."
-        primaryCta={{ label: ctas.bookDemo, href: ctas.bookDemoHref }}
         secondaryCta={{ label: ctas.contactUs, href: "/contact" }}
       />
 
@@ -141,14 +141,7 @@ export default function AboutPage() {
             not a pilot that stalls after three months.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href={ctas.bookDemoHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
-            >
-              {ctas.bookDemo}
-            </a>
+            <GoogleSchedulingButton />
             <a
               href="/contact"
               className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-gray-600 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 rounded-lg transition-colors"

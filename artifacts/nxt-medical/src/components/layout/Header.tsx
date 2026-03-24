@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { navItems, ctas } from "@/content/site";
+import GoogleSchedulingButton from "@/components/GoogleSchedulingButton";
 
 type NavChild = { label: string; href: string };
 type NavItem = { label: string; href: string; children?: NavChild[] };
@@ -120,14 +121,7 @@ export default function Header() {
             >
               {ctas.contactUs}
             </Link>
-            <a
-              href={ctas.bookDemoHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
-            >
-              {ctas.bookDemo}
-            </a>
+            <GoogleSchedulingButton />
           </div>
 
           {/* Mobile menu button */}
@@ -211,15 +205,9 @@ export default function Header() {
               >
                 {ctas.contactUs}
               </Link>
-              <a
-                href={ctas.bookDemoHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
-                onClick={() => setMobileOpen(false)}
-              >
-                {ctas.bookDemo}
-              </a>
+              <div onClick={() => setMobileOpen(false)}>
+                <GoogleSchedulingButton />
+              </div>
             </div>
           </div>
         </div>

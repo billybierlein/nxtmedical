@@ -1,17 +1,18 @@
 import { Link } from "wouter";
 import { ctas } from "@/content/site";
+import GoogleSchedulingButton from "@/components/GoogleSchedulingButton";
 
 interface CTABandProps {
   heading?: string;
   subheading?: string;
-  primaryCta?: { label: string; href: string };
+  primaryCta?: { label: string; href: string } | "scheduling";
   secondaryCta?: { label: string; href: string };
 }
 
 export default function CTABand({
   heading = "Ready to bring remote care to your practice?",
   subheading = "NXT Medical handles the clinical operations, documentation, and patient support — so your team can focus on care.",
-  primaryCta = { label: ctas.bookDemo, href: ctas.bookDemoHref },
+  primaryCta = "scheduling",
   secondaryCta = { label: ctas.contactUs, href: "/contact" },
 }: CTABandProps) {
   return (
@@ -20,22 +21,26 @@ export default function CTABand({
         <h2 className="text-2xl md:text-3xl font-bold text-white">{heading}</h2>
         <p className="mt-4 text-gray-400 text-base leading-relaxed">{subheading}</p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-          {primaryCta.href.startsWith("http") ? (
-            <a
-              href={primaryCta.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors text-center"
-            >
-              {primaryCta.label}
-            </a>
+          {primaryCta === "scheduling" ? (
+            <GoogleSchedulingButton />
           ) : (
-            <Link
-              href={primaryCta.href}
-              className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
-            >
-              {primaryCta.label}
-            </Link>
+            primaryCta.href.startsWith("http") ? (
+              <a
+                href={primaryCta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors text-center"
+              >
+                {primaryCta.label}
+              </a>
+            ) : (
+              <Link
+                href={primaryCta.href}
+                className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
+              >
+                {primaryCta.label}
+              </Link>
+            )
           )}
           <Link
             href={secondaryCta.href}

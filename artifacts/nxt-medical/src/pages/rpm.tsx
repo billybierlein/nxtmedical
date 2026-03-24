@@ -59,7 +59,6 @@ export default function RPMPage() {
         badge="Remote Patient Monitoring"
         headline="Real-Time Monitoring Between Visits"
         subheadline="NXT Medical manages the full RPM workflow — devices, daily data review, patient outreach, and documentation — so your clinical team gets the data without the overhead."
-        primaryCta={{ label: ctas.bookDemo, href: ctas.bookDemoHref }}
         secondaryCta={{ label: ctas.contactUs, href: "/contact" }}
       />
 

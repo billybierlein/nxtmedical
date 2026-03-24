@@ -1,10 +1,11 @@
 import { Link } from "wouter";
 import { ctas } from "@/content/site";
+import GoogleSchedulingButton from "@/components/GoogleSchedulingButton";
 
 interface HeroProps {
   headline: string;
   subheadline: string;
-  primaryCta?: { label: string; href: string };
+  primaryCta?: { label: string; href: string } | "scheduling";
   secondaryCta?: { label: string; href: string } | null;
   badge?: string;
   size?: "large" | "medium";
@@ -13,7 +14,7 @@ interface HeroProps {
 export default function Hero({
   headline,
   subheadline,
-  primaryCta = { label: ctas.bookDemo, href: ctas.bookDemoHref },
+  primaryCta = "scheduling",
   secondaryCta: secondaryCtaProp,
   badge,
   size = "large",
@@ -26,7 +27,6 @@ export default function Hero({
         size === "large" ? "py-28 md:py-36" : "py-20 md:py-28"
       }`}
     >
-      {/* Subtle grid background */}
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
@@ -35,7 +35,6 @@ export default function Hero({
         }}
       />
 
-      {/* Accent glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-3xl opacity-60 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -64,7 +63,9 @@ export default function Hero({
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-          {primaryCta && (
+          {primaryCta === "scheduling" ? (
+            <GoogleSchedulingButton />
+          ) : primaryCta ? (
             primaryCta.href.startsWith("http") ? (
               <a
                 href={primaryCta.href}
@@ -82,7 +83,7 @@ export default function Hero({
                 {primaryCta.label}
               </Link>
             )
-          )}
+          ) : null}
           {secondaryCta && (
             secondaryCta.href.startsWith("#") ? (
               <a
