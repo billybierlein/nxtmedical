@@ -6,6 +6,7 @@ import FAQSection from "@/components/sections/FAQSection";
 import CTABand from "@/components/sections/CTABand";
 import { chiropractorFaqs } from "@/content/faqs";
 import { ctas } from "@/content/site";
+import GoogleSchedulingButton from "@/components/GoogleSchedulingButton";
 
 const howItWorksSteps = [
   {
@@ -303,6 +304,10 @@ export default function ForChiropractorsPage() {
               />
               Your browser does not support the video tag.
             </video>
+          </div>
+
+          <div className="mt-10">
+            <GoogleSchedulingButton label="Book a Demo" />
           </div>
         </div>
       </section>
