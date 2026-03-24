@@ -101,24 +101,15 @@ export default function ContactPage() {
                   ))}
                 </ul>
               </div>
-              <div className="w-full rounded-xl border border-gray-100 bg-gray-50 p-10 flex flex-col items-center justify-center text-center">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-5">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">Schedule Your Demo</h3>
-                <p className="mt-2 text-gray-500 text-sm leading-relaxed max-w-sm">
-                  Pick a time that works for you. Our team will walk you through everything in a 30-minute call.
-                </p>
-                <a
-                  href={ctas.bookDemoHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 px-8 py-3.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  Open Scheduling Calendar
-                </a>
-                <p className="mt-3 text-xs text-gray-400">Opens Google Calendar in a new tab</p>
+              <div className="w-full rounded-xl border border-gray-100 overflow-hidden bg-white shadow-sm">
+                <iframe
+                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0rQ2JLPnfHtutKeUScHA7zCTvaop16jDRzgBD3LDmzCzVbWZy5hsClHuRh5JhLogWx2ScWyC3e?gv=true"
+                  style={{ border: 0 }}
+                  width="100%"
+                  height="600"
+                  title="Schedule a Demo with NXT Medical"
+                  loading="lazy"
+                />
               </div>
             </div>
 
