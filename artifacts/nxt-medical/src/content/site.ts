@@ -16,10 +16,16 @@ export const siteConfig = {
 
 export const navItems = [
   { label: "Home", href: "/" },
-  { label: "Remote Care", href: "/remote-care" },
-  { label: "RPM", href: "/rpm" },
-  { label: "CCM", href: "/ccm" },
-  { label: "RTM", href: "/rtm" },
+  {
+    label: "Remote Care",
+    href: "/remote-care",
+    children: [
+      { label: "Remote Care Overview", href: "/remote-care" },
+      { label: "RPM — Remote Patient Monitoring", href: "/rpm" },
+      { label: "CCM — Chronic Care Management", href: "/ccm" },
+      { label: "RTM — Remote Therapeutic Monitoring", href: "/rtm" },
+    ],
+  },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
