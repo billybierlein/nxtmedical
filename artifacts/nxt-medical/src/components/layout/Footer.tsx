@@ -16,8 +16,7 @@ export default function Footer() {
               <span className="font-semibold text-white text-sm tracking-tight">NXT Medical</span>
             </div>
             <p className="text-sm leading-relaxed text-gray-500 max-w-sm">
-              Remote patient care programs built for medical practices. Hands-on implementation,
-              clinical staffing, and ongoing support — so your team can focus on care.
+              Helping medical practices improve patient outcomes and unlock new revenue — through expert implementation, operational support, and ongoing patient engagement.
             </p>
             <div className="mt-6 flex flex-col gap-1 text-sm">
               <span className="text-gray-500">
