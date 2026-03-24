@@ -70,7 +70,22 @@ export default function ContactPage() {
                   ))}
                 </ul>
               </div>
-              <FormEmbed formKey="contactForm" />
+              <div className="w-full rounded-xl border border-gray-100 overflow-hidden bg-white shadow-sm">
+                <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/SkBmrX47puBhwMHYkNZ0"
+                  style={{ width: "100%", height: "1111px", border: "none", borderRadius: "3px" }}
+                  id="inline-SkBmrX47puBhwMHYkNZ0"
+                  data-layout='{"id":"INLINE"}'
+                  data-trigger-type="alwaysShow"
+                  data-activation-type="alwaysActivated"
+                  data-deactivation-type="neverDeactivate"
+                  data-form-name="Contact Us"
+                  data-height="1111"
+                  data-layout-iframe-id="inline-SkBmrX47puBhwMHYkNZ0"
+                  data-form-id="SkBmrX47puBhwMHYkNZ0"
+                  title="Contact Us"
+                />
+              </div>
             </div>
 
             <div className="border-t border-gray-100" />
