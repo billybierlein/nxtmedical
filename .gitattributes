@@ -1,0 +1,2 @@
+artifacts/nxt-medical/public/videos/chiro-intro.mp4 filter=lfs diff=lfs merge=lfs -text
+attached_assets/1753738645-Chiro-2-Min-Intro-072825_1774364087559.mp4 filter=lfs diff=lfs merge=lfs -text

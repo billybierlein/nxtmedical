@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { CheckCircle2, Users, ClipboardList, Settings, FileText, Play, DollarSign, ShieldCheck, Zap, Building } from "lucide-react";
+import { CheckCircle2, Users, ClipboardList, Settings, FileText, DollarSign, ShieldCheck, Zap, Building } from "lucide-react";
 import Hero from "@/components/sections/Hero";
 import BenefitsGrid from "@/components/sections/BenefitsGrid";
 import FAQSection from "@/components/sections/FAQSection";
@@ -289,18 +289,19 @@ export default function ForChiropractorsPage() {
             opportunity.
           </p>
 
-          {/* Video placeholder — replace src with actual video embed URL */}
-          <div className="mt-10 relative bg-gray-900 rounded-2xl overflow-hidden aspect-video flex items-center justify-center">
-            {/* TODO: Replace with actual video embed. Example: */}
-            {/* <iframe src="https://www.youtube.com/embed/VIDEO_ID" ... /> */}
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <Play size={28} className="text-primary ml-1" />
-              </div>
-              <p className="text-gray-400 text-sm">
-                Video coming soon — embed URL will go here
-              </p>
-            </div>
+          <div className="mt-10 relative rounded-2xl overflow-hidden aspect-video">
+            <video
+              className="w-full h-full object-cover rounded-2xl"
+              controls
+              preload="metadata"
+              poster=""
+            >
+              <source
+                src={`${import.meta.env.BASE_URL}videos/chiro-intro.mp4`}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>
