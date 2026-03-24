@@ -8,8 +8,8 @@ export const siteConfig = {
     "NXT Medical delivers remote patient monitoring, chronic care management, and remote therapeutic monitoring programs — designed for medical practices that want better outcomes without burdening their staff.",
   url: "https://nxtmedical.us",
   contact: {
-    phone: "[PHONE_PLACEHOLDER]",
-    email: "[EMAIL_PLACEHOLDER]",
+    phone: "(954) 593.03.74",
+    email: "info@nxtmedical.us",
     address: "",
   },
 };
