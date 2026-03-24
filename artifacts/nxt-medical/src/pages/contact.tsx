@@ -103,7 +103,7 @@ export default function ContactPage() {
               </div>
               <div className="w-full rounded-xl border border-gray-100 overflow-hidden bg-white shadow-sm">
                 <iframe
-                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2fidDIGPO7BN6X6cR0Rj62onXUQNjPSWqN_hJfk3NiQrHjfLj-VDm_JVmxrIl1TLqzBf1IFB5p?gv=true"
+                  src={ctas.bookDemoHref}
                   style={{ border: 0 }}
                   width="100%"
                   height="600"
