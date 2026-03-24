@@ -45,10 +45,12 @@ export const footerLinks = {
     { label: "Chronic Care Management (CCM)", href: "/ccm" },
     { label: "Remote Therapeutic Monitoring (RTM)", href: "/rtm" },
   ],
+  whoWeServe: [
+    { label: "Who We Serve — Overview", href: "/who-we-serve" },
+    { label: "Chiropractors", href: "/for-chiropractors" },
+  ],
   company: [
     { label: "About NXT Medical", href: "/about" },
-    { label: "Who We Serve", href: "/who-we-serve" },
-    { label: "For Chiropractors", href: "/for-chiropractors" },
     { label: "Contact Us", href: "/contact" },
   ],
 };
