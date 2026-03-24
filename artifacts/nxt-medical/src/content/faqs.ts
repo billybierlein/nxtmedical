@@ -119,3 +119,36 @@ export const rtmFaqs = [
       "NXT Medical supports RTM programs with monitoring documentation, progress reporting, and workflow support aligned with current CMS RTM guidelines. The program is designed to help practices capture the data, patient interaction, and clinical staff time needed to support appropriate billing under applicable RTM CPT codes. Providers should always confirm final coding and reimbursement decisions with their billing team, but NXT helps create a stronger operational foundation for compliant, well-documented RTM delivery.",
   },
 ];
+
+export const chiropractorFaqs = [
+  {
+    question: "Do chiropractors need to manage the remote care program themselves?",
+    answer:
+      "No. NXT is designed to handle the operational side of the program so the clinic does not need to build a separate in-house process.",
+  },
+  {
+    question: "Is this a lot of extra work for the practice?",
+    answer:
+      "The goal is to keep the clinic's role lightweight. Your team identifies appropriate patients and reviews progress updates, while NXT supports the rest of the workflow.",
+  },
+  {
+    question: "What type of patients are the best fit?",
+    answer:
+      "The best fit is generally clinics with eligible Medicare patient populations who may benefit from ongoing remote support and monitoring.",
+  },
+  {
+    question: "Do we need to hire staff to offer this?",
+    answer:
+      "No additional hiring should be required to explore the program. NXT is built to reduce the operational lift on the clinic.",
+  },
+  {
+    question: "What happens during the demo?",
+    answer:
+      "We walk through how the program works, what your clinic would be responsible for, what NXT handles, and whether the model appears to fit your patient population and goals.",
+  },
+  {
+    question: "Is this available nationwide?",
+    answer:
+      "NXT Remote Care is available in many markets. During the demo we can confirm availability and discuss how the program fits your specific region and patient base.",
+  },
+];

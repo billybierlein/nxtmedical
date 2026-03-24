@@ -39,6 +39,7 @@ export const footerLinks = {
   ],
   company: [
     { label: "About NXT Medical", href: "/about" },
+    { label: "For Chiropractors", href: "/for-chiropractors" },
     { label: "Contact Us", href: "/contact" },
   ],
 };
