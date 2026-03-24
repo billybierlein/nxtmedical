@@ -13,7 +13,7 @@ export default function Footer() {
               <img
                 src={`${import.meta.env.BASE_URL}images/nxt-logo.png`}
                 alt="NXT Medical"
-                className="h-10 w-auto brightness-0 invert"
+                className="h-14 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-sm leading-relaxed text-gray-500 max-w-sm">
