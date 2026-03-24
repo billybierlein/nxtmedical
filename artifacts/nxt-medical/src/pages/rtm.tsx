@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { CheckCircle2, ScanFace, TrendingUp, ShieldCheck } from "lucide-react";
+import { CheckCircle2, ScanFace, TrendingUp, ShieldCheck, Gamepad2, BarChart3, Sparkles } from "lucide-react";
 import Hero from "@/components/sections/Hero";
 import BenefitsGrid from "@/components/sections/BenefitsGrid";
 import FAQSection from "@/components/sections/FAQSection";
@@ -222,6 +222,160 @@ export default function RTMPage() {
           <p className="mt-12 text-center text-gray-700 text-base font-medium max-w-2xl mx-auto leading-relaxed">
             You get the benefits of advanced remote monitoring — without changing how your practice
             operates.
+          </p>
+        </div>
+      </section>
+
+      {/* Patient Engagement / Game-Based Therapy */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Heading + intro */}
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="text-primary text-sm font-medium uppercase tracking-wide">
+              Patient Engagement
+            </span>
+            <h2 className="mt-3 text-2xl md:text-3xl font-bold text-gray-900">
+              Keeping Patients Engaged Is What Drives Results
+            </h2>
+            <p className="mt-4 text-gray-500 text-base leading-relaxed">
+              Most remote monitoring programs fail for one simple reason — patients stop
+              participating. NXT Medical solves this by incorporating structured, game-based
+              therapeutic activities designed to keep patients consistently engaged while
+              supporting measurable clinical outcomes.
+            </p>
+          </div>
+
+          {/* Research-backed highlight block */}
+          <div className="max-w-4xl mx-auto mb-14 bg-primary/[0.03] border border-primary/10 rounded-2xl p-8 md:p-10">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Sparkles size={22} className="text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-900 text-base mb-3">
+                  Backed by Cognitive Engagement Research
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-5">
+                  Research on structured, game-like cognitive exercises has shown that consistent
+                  participation can support memory, processing, learning, and other meaningful
+                  cognitive functions over time. This is not passive screen time — it is active
+                  therapeutic engagement designed to encourage adherence and reinforce better
+                  long-term participation.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  {[
+                    "Structured cognitive activities support active engagement",
+                    "Consistency is a major driver of measurable benefit",
+                    "Interactive participation can outperform passive monitoring alone",
+                  ].map((point, i) => (
+                    <div
+                      key={i}
+                      className="flex items-start gap-2 bg-white/70 rounded-lg px-3.5 py-2.5 border border-primary/5"
+                    >
+                      <CheckCircle2 size={14} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-600 text-xs leading-relaxed">{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 3 content cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1 — How We Keep Patients Engaged */}
+            <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8 flex flex-col gap-5">
+              <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center flex-shrink-0">
+                <Gamepad2 size={20} className="text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-lg mb-3">
+                  How We Keep Patients Engaged
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-3">
+                  NXT patients do more than simply check in.
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed mb-3">
+                  We provide structured, game-based therapeutic activities that are designed for
+                  regular participation, simple daily use, and long-term adherence.
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  These activities make it easier for patients to stay involved in the program
+                  without adding complexity or frustration.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 — Why Engagement Improves Outcomes */}
+            <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8 flex flex-col gap-5">
+              <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center flex-shrink-0">
+                <BarChart3 size={20} className="text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-lg mb-3">
+                  Why Engagement Improves Outcomes
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  Consistent participation is what makes remote therapeutic monitoring effective.
+                  When patients remain engaged:
+                </p>
+                <ul className="space-y-2 mb-4">
+                  {[
+                    "Adherence improves",
+                    "Drop-off decreases",
+                    "Providers gain better visibility into real-world activity",
+                    "Progress becomes easier to measure over time",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <CheckCircle2 size={15} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-500 text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-gray-500 text-sm leading-relaxed font-medium">
+                  Engagement is what turns monitoring into meaningful care.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 — Unique to NXT */}
+            <div className="bg-gray-50 rounded-2xl border border-gray-100 p-8 flex flex-col gap-5">
+              <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center flex-shrink-0">
+                <ShieldCheck size={20} className="text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-lg mb-3">
+                  Why This Is Unique to NXT Medical
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  Most RTM programs rely on passive tracking, occasional reminders, or limited
+                  patient interaction. NXT builds engagement directly into the care model:
+                </p>
+                <ul className="space-y-2 mb-4">
+                  {[
+                    "Structured therapeutic activities",
+                    "Ongoing patient participation",
+                    "Monitoring support handled on your behalf",
+                    "Progress reporting tied back to the program",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <CheckCircle2 size={15} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-500 text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  This helps create a more sustainable RTM experience for both the patient and
+                  the provider.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Closing statement */}
+          <p className="mt-12 text-center text-gray-700 text-base font-medium max-w-2xl mx-auto leading-relaxed">
+            Engaged patients produce better outcomes — and a stronger, more sustainable RTM
+            program.
           </p>
         </div>
       </section>

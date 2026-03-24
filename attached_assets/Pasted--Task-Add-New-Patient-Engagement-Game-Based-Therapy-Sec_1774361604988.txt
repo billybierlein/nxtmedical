@@ -1,0 +1,273 @@
+# Task: Add New Patient Engagement / Game-Based Therapy Section to RTM Website Page
+
+## Objective
+Add a new section to the RTM website page that explains why **structured game-based therapeutic activities** are an important part of the NXT Medical RTM program.
+
+This section should communicate:
+
+1. Why patient engagement matters in RTM
+2. How game-based activities help improve consistency and outcomes
+3. Why this approach is different and more effective with NXT Medical
+
+The goal is to position this part of the program as:
+- clinically meaningful
+- easy to understand
+- research-supported
+- differentiated from generic monitoring programs
+
+---
+
+## Section Placement
+Insert this section **after the FaceScan / technology differentiation section** and **before the main CTA/demo section**.
+
+Recommended narrative flow on page:
+
+1. What NXT Medical Provides in RTM
+2. How We Turn Patient Progress Into Measurable, Billable Data
+3. **NEW: Patient Engagement / Game-Based Therapy section**
+4. CTA / Demo / Next Step
+
+This new section should feel like the next logical step in the story:
+- section above = how progress is measured
+- new section = how patient activity and adherence are sustained
+
+---
+
+## Important Design Direction
+Do **not** reuse the same 6-card grid from the original services section.
+
+Also do **not** make this section visually identical to the FaceScan section above it.
+
+We want visual variety while keeping the page cohesive.
+
+This section should feel:
+- a little more engaging
+- still professional and clinical
+- slightly more dynamic in presentation
+- easy to scan
+
+Recommended format:
+- centered section heading + short intro
+- a **research-backed highlight block** near the top
+- below that, a **3-card layout**
+- optional closing statement under the cards
+
+This gives the section a different visual rhythm from the others while preserving consistency.
+
+---
+
+## Visual Style
+Match the overall page aesthetic:
+- clean healthcare design
+- modern, trustworthy, easy to read
+- rounded cards
+- subtle borders/shadows
+- no overly playful “gaming” look
+
+Important:
+Even though this section is about game-based activities, the design should still feel medical/professional, not gimmicky.
+
+Suggested styling direction:
+- section background: subtle contrast from surrounding section if helpful
+  - ex: very light neutral or soft tinted background
+- cards: white background with soft border
+- border radius: `rounded-2xl`
+- spacing: generous
+- typography: clear hierarchy, strong readability
+- optional icons if already used elsewhere on page
+
+---
+
+## Layout Requirements
+
+### Top portion
+Include:
+- main heading
+- short supporting paragraph
+- research-backed callout/highlight block
+
+### Lower portion
+Below the intro/highlight, add 3 cards for:
+1. How We Keep Patients Engaged
+2. Why Engagement Improves Outcomes
+3. Why This Is Unique to NXT Medical
+
+### Responsiveness
+Desktop:
+- 3 cards in one row
+Tablet:
+- 2 column wrap if needed
+Mobile:
+- single stacked column
+
+Ensure the section is balanced and does not feel crowded.
+
+---
+
+## Copy to Use
+
+### Section Heading
+## Keeping Patients Engaged Is What Drives Results
+
+### Supporting Intro
+Most remote monitoring programs fail for one simple reason — patients stop participating.
+
+NXT Medical solves this by incorporating structured, game-based therapeutic activities designed to keep patients consistently engaged while supporting measurable clinical outcomes.
+
+---
+
+## Research Highlight Block
+Use this as a visually distinct supporting block above the cards.
+
+### Highlight Heading
+### Backed by Cognitive Engagement Research
+
+### Highlight Copy
+Research on structured, game-like cognitive exercises has shown that consistent participation can support memory, processing, learning, and other meaningful cognitive functions over time.
+
+This is not passive screen time — it is active therapeutic engagement designed to encourage adherence and reinforce better long-term participation.
+
+### Optional Highlight Points
+If a bullet or mini-stat style works better in the design, use these:
+- Structured cognitive activities support active engagement
+- Consistency is a major driver of measurable benefit
+- Interactive participation can outperform passive monitoring alone
+
+Do not overstate medical claims. Keep the language credible and measured.
+
+---
+
+## Card 1
+### Title
+### How We Keep Patients Engaged
+
+### Copy
+NXT patients do more than simply check in.
+
+We provide structured, game-based therapeutic activities that are designed for regular participation, simple daily use, and long-term adherence.
+
+These activities make it easier for patients to stay involved in the program without adding complexity or frustration.
+
+---
+
+## Card 2
+### Title
+### Why Engagement Improves Outcomes
+
+### Copy
+Consistent participation is what makes remote therapeutic monitoring effective.
+
+When patients remain engaged:
+- adherence improves
+- drop-off decreases
+- providers gain better visibility into real-world activity
+- progress becomes easier to measure over time
+
+Engagement is what turns monitoring into meaningful care.
+
+---
+
+## Card 3
+### Title
+### Why This Is Unique to NXT Medical
+
+### Copy
+Most RTM programs rely on passive tracking, occasional reminders, or limited patient interaction.
+
+NXT builds engagement directly into the care model:
+- structured therapeutic activities
+- ongoing patient participation
+- monitoring support handled on your behalf
+- progress reporting tied back to the program
+
+This helps create a more sustainable RTM experience for both the patient and the provider.
+
+---
+
+## Optional Closing Statement
+Add a centered supporting statement beneath the cards if it fits the page design:
+
+**Engaged patients produce better outcomes — and a stronger, more sustainable RTM program.**
+
+Style this as a closing reinforcement line, not a CTA.
+
+---
+
+## UX / Content Rules
+- Keep the tone professional and credible
+- Avoid making this sound like entertainment or consumer gaming
+- Emphasize therapeutic engagement, adherence, and outcomes
+- Keep copy easy for providers to understand quickly
+- Break dense content into short paragraphs or bullets where helpful
+- Do not use exaggerated claims
+- Preserve trust and clinical legitimacy
+
+---
+
+## Design Guidance for the Research Highlight Block
+This should be visually distinct from the 3 cards.
+
+Possible approaches:
+- a wider horizontal panel above the cards
+- a bordered callout box
+- a softly tinted container with heading + short copy + 3 mini points
+
+The purpose is to signal:
+“this approach is grounded in real cognitive engagement principles”
+
+Do not make it too large or visually overpowering.
+
+---
+
+## Accessibility / Quality
+- Maintain semantic heading structure
+- Ensure strong text contrast
+- Preserve consistent spacing and alignment
+- Make the layout feel polished on desktop and mobile
+- If icons are used, keep them subtle and clinically appropriate
+
+Suggested icon ideas if needed:
+- engagement/activity icon
+- progress/improvement icon
+- support/workflow/shield icon
+
+Only use icons if consistent with the rest of the page.
+
+---
+
+## Suggested Technical Styling Direction
+This does not need to be identical to the previous section, but it should feel part of the same system.
+
+Recommended utility-style direction:
+- section wrapper with generous vertical padding (`py-20` desktop / `py-14` mobile)
+- max width aligned to existing site container
+- intro content centered with controlled max width
+- highlight block with slightly different background from cards
+- cards in responsive grid
+- consistent gaps and card heights where practical
+
+---
+
+## Definition of Done
+This task is complete when:
+1. A new section is added after the FaceScan section
+2. It clearly explains the value of game-based therapeutic engagement
+3. It includes:
+   - a section heading
+   - intro copy
+   - a research-backed highlight/callout block
+   - 3 content cards
+   - optional closing statement if it fits
+4. It does not reuse the same layout as the services section
+5. It feels visually distinct from the FaceScan section while remaining on-brand
+6. It is fully responsive and polished across desktop/tablet/mobile
+7. It strengthens the page’s differentiation and trust
+
+---
+
+## Optional Enhancement
+If the current site supports subtle animation well, allow light entrance/fade-up behavior on scroll for:
+- the highlight block
+- each card
+
+Only do this if already consistent with the rest of the site and performance remains clean.
