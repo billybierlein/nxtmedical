@@ -158,8 +158,36 @@ export default function ForChiropractorsPage() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section id="video" className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            Watch the Quick Overview
+          </h2>
+          <p className="mt-3 text-gray-500 text-base max-w-xl mx-auto leading-relaxed">
+            See how the program works, what your clinic is responsible for, and
+            why chiropractors are exploring this as a low-burden growth
+            opportunity.
+          </p>
+
+          {/* Video placeholder — replace src with actual video embed URL */}
+          <div className="mt-10 relative bg-gray-900 rounded-2xl overflow-hidden aspect-video flex items-center justify-center">
+            {/* TODO: Replace with actual video embed. Example: */}
+            {/* <iframe src="https://www.youtube.com/embed/VIDEO_ID" ... /> */}
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                <Play size={28} className="text-primary ml-1" />
+              </div>
+              <p className="text-gray-400 text-sm">
+                Video coming soon — embed URL will go here
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. Revenue Opportunity */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
@@ -218,7 +246,7 @@ export default function ForChiropractorsPage() {
       </section>
 
       {/* 4. Your Clinic vs. NXT */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
@@ -276,34 +304,6 @@ export default function ForChiropractorsPage() {
         heading="Why Chiropractors Explore NXT Remote Care"
         columns={3}
       />
-
-      {/* 6. Video Section */}
-      <section id="video" className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-            Watch the Quick Overview
-          </h2>
-          <p className="mt-3 text-gray-500 text-base max-w-xl mx-auto leading-relaxed">
-            See how the program works, what your clinic is responsible for, and
-            why chiropractors are exploring this as a low-burden growth
-            opportunity.
-          </p>
-
-          {/* Video placeholder — replace src with actual video embed URL */}
-          <div className="mt-10 relative bg-gray-900 rounded-2xl overflow-hidden aspect-video flex items-center justify-center">
-            {/* TODO: Replace with actual video embed. Example: */}
-            {/* <iframe src="https://www.youtube.com/embed/VIDEO_ID" ... /> */}
-            <div className="text-center">
-              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <Play size={28} className="text-primary ml-1" />
-              </div>
-              <p className="text-gray-400 text-sm">
-                Video coming soon — embed URL will go here
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 7. Trust / Credibility */}
       <section className="py-20 bg-white">
