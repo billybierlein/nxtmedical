@@ -113,36 +113,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="border-t border-gray-100" />
-
-            {/* Refer a Patient */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <span className="text-primary text-sm font-medium uppercase tracking-wide">
-                  {ctas.referPatient}
-                </span>
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">Refer a Patient</h2>
-                <p className="mt-3 text-gray-500 text-sm leading-relaxed">
-                  If your practice is already working with NXT Medical, use the form to refer a
-                  patient into one of our remote care programs. Our team will confirm eligibility
-                  and follow up with enrollment steps.
-                </p>
-                <ul className="mt-6 space-y-2">
-                  {[
-                    "RPM enrollment referrals",
-                    "CCM program referrals",
-                    "RTM program referrals",
-                    "Multi-program patient referrals",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-gray-500 text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <FormEmbed formKey="referPatientForm" />
-            </div>
           </div>
         </div>
       </section>
