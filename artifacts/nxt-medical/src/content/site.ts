@@ -26,6 +26,14 @@ export const navItems = [
       { label: "RTM — Remote Therapeutic Monitoring", href: "/rtm" },
     ],
   },
+  {
+    label: "Who We Serve",
+    href: "/who-we-serve",
+    children: [
+      { label: "Who We Serve — Overview", href: "/who-we-serve" },
+      { label: "Chiropractors", href: "/for-chiropractors" },
+    ],
+  },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -39,6 +47,7 @@ export const footerLinks = {
   ],
   company: [
     { label: "About NXT Medical", href: "/about" },
+    { label: "Who We Serve", href: "/who-we-serve" },
     { label: "For Chiropractors", href: "/for-chiropractors" },
     { label: "Contact Us", href: "/contact" },
   ],

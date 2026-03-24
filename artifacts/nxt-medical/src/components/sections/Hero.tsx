@@ -5,7 +5,7 @@ interface HeroProps {
   headline: string;
   subheadline: string;
   primaryCta?: { label: string; href: string };
-  secondaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string } | null;
   badge?: string;
   size?: "large" | "medium";
 }
@@ -14,10 +14,12 @@ export default function Hero({
   headline,
   subheadline,
   primaryCta = { label: ctas.bookDemo, href: "/contact#demo" },
-  secondaryCta = { label: ctas.contactUs, href: "/contact" },
+  secondaryCta: secondaryCtaProp,
   badge,
   size = "large",
 }: HeroProps) {
+  const secondaryCta = secondaryCtaProp === null ? null : (secondaryCtaProp ?? { label: ctas.contactUs, href: "/contact" });
+
   return (
     <section
       className={`relative bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-white overflow-hidden ${
