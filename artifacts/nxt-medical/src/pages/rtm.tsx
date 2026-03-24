@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ScanFace, TrendingUp, ShieldCheck } from "lucide-react";
 import Hero from "@/components/sections/Hero";
 import BenefitsGrid from "@/components/sections/BenefitsGrid";
 import FAQSection from "@/components/sections/FAQSection";
@@ -117,6 +117,114 @@ export default function RTMPage() {
         subheading="We manage the monitoring, patient engagement, and documentation — your team focuses on clinical decisions."
         columns={3}
       />
+
+      {/* Technology Differentiation */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Heading block */}
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-primary text-sm font-medium uppercase tracking-wide">
+              How It Works
+            </span>
+            <h2 className="mt-3 text-2xl md:text-3xl font-bold text-gray-900">
+              How We Turn Patient Progress Into Measurable, Billable Data
+            </h2>
+            <p className="mt-4 text-gray-500 text-base leading-relaxed">
+              Most monitoring programs rely on subjective feedback. NXT Medical uses advanced
+              AI-based facial scanning technology to objectively track patient progress — giving
+              you real clinical insight while supporting compliant RTM billing.
+            </p>
+          </div>
+
+          {/* 3-column cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1 — How It Works */}
+            <div className="bg-white rounded-2xl border border-gray-100 p-8 flex flex-col gap-5">
+              <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center flex-shrink-0">
+                <ScanFace size={20} className="text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-lg mb-3">How It Works</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-3">
+                  Patients complete a quick scan using their smartphone or tablet — no equipment,
+                  no learning curve.
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed mb-3">
+                  Our system analyzes subtle facial movements and neuromuscular patterns to generate
+                  measurable data on patient function and response to therapy.
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  Each scan creates a baseline, allowing us to track changes over time and identify
+                  meaningful progress or setbacks.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 — Why More Effective */}
+            <div className="bg-white rounded-2xl border border-gray-100 p-8 flex flex-col gap-5">
+              <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center flex-shrink-0">
+                <TrendingUp size={20} className="text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-lg mb-3">Why This Is More Effective</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  Traditional care relies heavily on patient-reported symptoms, in-office assessments,
+                  and limited visibility between visits. With NXT:
+                </p>
+                <ul className="space-y-2">
+                  {[
+                    "Progress is objectively measured, not estimated",
+                    "Monitoring happens continuously, not just in-office",
+                    "Small issues can be identified before they become setbacks",
+                    "Each interaction contributes to documented clinical value",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <CheckCircle2 size={15} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-500 text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Card 3 — Why NXT Is Different */}
+            <div className="bg-white rounded-2xl border border-gray-100 p-8 flex flex-col gap-5">
+              <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center flex-shrink-0">
+                <ShieldCheck size={20} className="text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-lg mb-3">Why This Is Unique to NXT Medical</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  Most RTM programs stop at data collection. NXT delivers a complete, done-for-you
+                  system:
+                </p>
+                <ul className="space-y-2 mb-4">
+                  {[
+                    "We manage patient engagement and monitoring",
+                    "We structure the data into actionable progress reports",
+                    "We support documentation aligned with RTM billing requirements",
+                    "Your team stays focused on patient care and clinical decisions",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <CheckCircle2 size={15} className="text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-500 text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-gray-500 text-sm leading-relaxed font-medium">
+                  No new workflows. No additional staff. No extra burden.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Closing statement */}
+          <p className="mt-12 text-center text-gray-700 text-base font-medium max-w-2xl mx-auto leading-relaxed">
+            You get the benefits of advanced remote monitoring — without changing how your practice
+            operates.
+          </p>
+        </div>
+      </section>
 
       {/* Reimbursement framing */}
       <section className="py-20 bg-gray-50">

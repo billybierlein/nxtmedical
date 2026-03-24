@@ -1,0 +1,220 @@
+# Task: Add New RTM Technology Differentiation Section to Website
+
+## Objective
+Add a new website section directly **below the existing “What NXT Medical Provides in RTM” section**.
+
+This new section should explain:
+
+1. **How the technology works**
+2. **Why it benefits the provider/patient**
+3. **Why this is unique when working with NXT Medical**
+
+The goal is to make the technology feel:
+- credible
+- easy to understand
+- clinically valuable
+- operationally simple for the provider
+
+---
+
+## Important Design Direction
+Do **not** repeat the exact same 6-card grid layout used in the section above.
+
+Reason:
+- The section above already communicates feature/service categories
+- This new section should feel more like a **differentiation / explanation block**
+- We want visual variety and better content hierarchy
+
+Instead, use a **new section format** with:
+- a centered heading + subheading
+- a short intro paragraph
+- **3 horizontally aligned content cards on desktop**
+- stacked vertically on mobile
+- each card representing:
+  1. How It Works
+  2. Why It’s More Effective
+  3. Why NXT Is Different
+
+---
+
+## Section Placement
+Insert this section immediately **after** the existing RTM services/features section shown on the page.
+
+It should visually feel like the next logical story section:
+- first section = what we provide
+- new section = why this approach is better
+
+Add generous top and bottom spacing so it does not feel cramped.
+
+Suggested spacing:
+- `py-20` desktop
+- `py-14` mobile
+
+---
+
+## Visual Style
+Match the overall brand and style of the current page:
+- clean medical / professional look
+- light background or very subtle contrast background
+- rounded cards
+- soft border or soft shadow
+- readable typography
+- calm, trustworthy tone
+
+Suggested styling direction:
+- section background: white or very light gray
+- cards: white with light border
+- rounded corners: `rounded-2xl`
+- padding: generous (`p-6` to `p-8`)
+- subtle shadow only if already consistent with rest of page
+- icons optional but helpful if already used elsewhere on page
+
+---
+
+## Layout Requirements
+
+### Section wrapper
+- centered container
+- max width similar to existing content sections
+- maintain consistent left/right padding with the rest of the page
+
+### Top content
+Include:
+- eyebrow or small label optional
+- large section headline
+- 1–2 sentence supporting copy
+- short intro paragraph before the cards
+
+### Card layout
+Desktop:
+- 3 columns
+Tablet:
+- 2 columns if needed, with final card wrapping cleanly
+Mobile:
+- 1 column
+
+Each card should have:
+- short title
+- concise paragraph or short bullet-style content
+- consistent spacing
+- equal visual weight
+
+---
+
+## Copy to Use
+
+### Section Heading
+## How We Turn Patient Progress Into Measurable, Billable Data
+
+### Supporting Intro
+Most monitoring programs rely on subjective feedback.
+
+NXT Medical uses advanced AI-based facial scanning technology to objectively track patient progress — giving you real clinical insight while supporting compliant RTM billing.
+
+---
+
+### Card 1 Title
+### How It Works
+
+### Card 1 Copy
+Patients complete a quick scan using their smartphone or tablet — no equipment, no learning curve.
+
+Our system analyzes subtle facial movements and neuromuscular patterns to generate measurable data on patient function and response to therapy.
+
+Each scan creates a baseline, allowing us to track changes over time and identify meaningful progress or setbacks.
+
+---
+
+### Card 2 Title
+### Why This Is More Effective
+
+### Card 2 Copy
+Traditional care relies heavily on patient-reported symptoms, in-office assessments, and limited visibility between visits.
+
+With NXT:
+- Progress is objectively measured, not estimated
+- Monitoring happens continuously, not just in-office
+- Small issues can be identified before they become setbacks
+- Each interaction contributes to documented clinical value
+
+---
+
+### Card 3 Title
+### Why This Is Unique to NXT Medical
+
+### Card 3 Copy
+Most RTM programs stop at data collection.
+
+NXT delivers a complete, done-for-you system:
+- We manage patient engagement and monitoring
+- We structure the data into actionable progress reports
+- We support documentation aligned with RTM billing requirements
+- Your team stays focused on patient care and clinical decisions
+
+No new workflows. No additional staff. No extra burden.
+
+---
+
+### Optional Closing Statement
+Add a centered line beneath the cards if it fits the design well:
+
+**You get the benefits of advanced remote monitoring — without changing how your practice operates.**
+
+Use slightly emphasized styling, but keep it elegant and not oversized.
+
+---
+
+## UX / Content Rules
+- Keep line lengths readable
+- Do not make paragraphs too dense
+- Break content into short paragraphs or compact bullet groups where helpful
+- Preserve a premium, trustworthy healthcare tone
+- Avoid hypey or overly “techy” language
+- Make the section easy for chiropractors and other providers to understand quickly
+
+---
+
+## Responsive Requirements
+Ensure this section looks polished on:
+- desktop
+- tablet
+- mobile
+
+Specifically:
+- no overly wide text blocks
+- clean spacing between heading, intro, cards, and closing line
+- cards should stack naturally on smaller screens
+- no awkward empty gaps
+
+---
+
+## Accessibility / Quality
+- Maintain semantic heading structure
+- Ensure contrast is strong enough for readability
+- If icons are used, they should support content and not distract
+- Avoid clutter
+- Keep padding and typography consistent with the rest of the site
+
+---
+
+## Definition of Done
+This task is complete when:
+1. A new section is added directly below the current RTM services section
+2. It does **not** reuse the same 6-card grid style
+3. It clearly communicates:
+   - how the technology works
+   - why it is beneficial
+   - why NXT is different
+4. It is fully responsive and visually aligned with the rest of the site
+5. The content is easy to scan and professionally presented
+6. The section strengthens trust and differentiation on the RTM page
+
+---
+
+## Optional Enhancement
+If it fits the current component system, add subtle icons for each of the 3 cards:
+- How It Works → scan / analytics icon
+- Why It’s More Effective → chart / progress icon
+- Why NXT Is Different → shield / workflow / support icon
+
+Only do this if it improves clarity and stays visually consistent.
