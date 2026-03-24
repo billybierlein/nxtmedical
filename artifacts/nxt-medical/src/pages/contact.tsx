@@ -70,7 +70,11 @@ export default function ContactPage() {
                   ))}
                 </ul>
               </div>
-              <div className="w-full rounded-xl border border-gray-100 overflow-hidden bg-white shadow-sm">
+              <div className="w-full rounded-xl border border-gray-100 overflow-hidden bg-white shadow-sm p-8">
+                <h3 className="text-lg font-semibold text-gray-900">Get in Touch</h3>
+                <p className="mt-2 text-gray-500 text-sm leading-relaxed">
+                  Fill out the form below and a member of our team will be in touch within one business day.
+                </p>
                 <iframe
                   src="https://api.leadconnectorhq.com/widget/form/SkBmrX47puBhwMHYkNZ0"
                   style={{ width: "100%", height: "1111px", border: "none", borderRadius: "3px" }}
