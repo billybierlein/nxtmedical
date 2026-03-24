@@ -72,12 +72,14 @@ export default function Footer() {
               ))}
             </ul>
             <div className="mt-8">
-              <Link
-                href="/contact#demo"
+              <a
+                href={ctas.bookDemoHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
               >
                 {ctas.bookDemo}
-              </Link>
+              </a>
             </div>
           </div>
         </div>

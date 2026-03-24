@@ -5,6 +5,7 @@ import BenefitsGrid from "@/components/sections/BenefitsGrid";
 import FAQSection from "@/components/sections/FAQSection";
 import CTABand from "@/components/sections/CTABand";
 import { chiropractorFaqs } from "@/content/faqs";
+import { ctas } from "@/content/site";
 
 const howItWorksSteps = [
   {
@@ -102,7 +103,7 @@ export default function ForChiropractorsPage() {
         badge="Remote Care for Chiropractic Clinics"
         headline="Turn Eligible Medicare Patients Into Monthly Recurring Revenue"
         subheadline="NXT Medical helps chiropractors add a new revenue stream through remote care programs without adding staff, managing billing, or taking on extra administrative work."
-        primaryCta={{ label: "Book a Demo", href: "/contact#demo" }}
+        primaryCta={{ label: "Book a Demo", href: ctas.bookDemoHref }}
         secondaryCta={{ label: "Watch 2-Minute Overview", href: "#video" }}
       />
 
@@ -349,7 +350,7 @@ export default function ForChiropractorsPage() {
       <CTABand
         heading="See Whether This Fits Your Clinic"
         subheading="Book a quick demo to see how NXT Remote Care works, what your clinic would need to do, and whether your patient base may be a fit."
-        primaryCta={{ label: "Book My Demo", href: "/contact#demo" }}
+        primaryCta={{ label: "Book My Demo", href: ctas.bookDemoHref }}
         secondaryCta={{ label: "Watch the Overview", href: "#video" }}
       />
     </>

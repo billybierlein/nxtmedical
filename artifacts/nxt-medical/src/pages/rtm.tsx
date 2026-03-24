@@ -59,7 +59,7 @@ export default function RTMPage() {
         badge="Remote Therapeutic Monitoring"
         headline="Therapy Adherence, Tracked Between Visits"
         subheadline="RTM helps you monitor whether patients are following prescribed therapy programs — closing the gap between clinic visits and improving recovery outcomes."
-        primaryCta={{ label: ctas.bookDemo, href: "/contact#demo" }}
+        primaryCta={{ label: ctas.bookDemo, href: ctas.bookDemoHref }}
         secondaryCta={{ label: ctas.contactUs, href: "/contact" }}
       />
 

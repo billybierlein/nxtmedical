@@ -59,7 +59,7 @@ export default function CCMPage() {
         badge="Chronic Care Management"
         headline="Ongoing Care for Your Most Complex Patients"
         subheadline="CCM gives your chronic condition patients structured monthly support — and gives your practice a recurring revenue stream from patients you are already managing."
-        primaryCta={{ label: ctas.bookDemo, href: "/contact#demo" }}
+        primaryCta={{ label: ctas.bookDemo, href: ctas.bookDemoHref }}
         secondaryCta={{ label: ctas.contactUs, href: "/contact" }}
       />
 

@@ -13,7 +13,7 @@ interface HeroProps {
 export default function Hero({
   headline,
   subheadline,
-  primaryCta = { label: ctas.bookDemo, href: "/contact#demo" },
+  primaryCta = { label: ctas.bookDemo, href: ctas.bookDemoHref },
   secondaryCta: secondaryCtaProp,
   badge,
   size = "large",
@@ -65,12 +65,23 @@ export default function Hero({
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
           {primaryCta && (
-            <Link
-              href={primaryCta.href}
-              className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
-            >
-              {primaryCta.label}
-            </Link>
+            primaryCta.href.startsWith("http") ? (
+              <a
+                href={primaryCta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors text-center"
+              >
+                {primaryCta.label}
+              </a>
+            ) : (
+              <Link
+                href={primaryCta.href}
+                className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
+              >
+                {primaryCta.label}
+              </Link>
+            )
           )}
           {secondaryCta && (
             secondaryCta.href.startsWith("#") ? (

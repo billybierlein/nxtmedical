@@ -56,7 +56,7 @@ export default function AboutPage() {
         badge="About NXT Medical"
         headline="A Hands-On Remote Care Partner"
         subheadline="NXT Medical was built to solve the operational gap that stops most practices from running successful remote care programs — by providing the clinical staff and infrastructure to run them directly."
-        primaryCta={{ label: ctas.bookDemo, href: "/contact#demo" }}
+        primaryCta={{ label: ctas.bookDemo, href: ctas.bookDemoHref }}
         secondaryCta={{ label: ctas.contactUs, href: "/contact" }}
       />
 
@@ -142,7 +142,9 @@ export default function AboutPage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="/contact#demo"
+              href={ctas.bookDemoHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
             >
               {ctas.bookDemo}

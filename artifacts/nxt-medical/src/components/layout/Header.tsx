@@ -120,12 +120,14 @@ export default function Header() {
             >
               {ctas.contactUs}
             </Link>
-            <Link
-              href="/contact#demo"
+            <a
+              href={ctas.bookDemoHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
             >
               {ctas.bookDemo}
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -209,13 +211,15 @@ export default function Header() {
               >
                 {ctas.contactUs}
               </Link>
-              <Link
-                href="/contact#demo"
+              <a
+                href={ctas.bookDemoHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full text-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {ctas.bookDemo}
-              </Link>
+              </a>
             </div>
           </div>
         </div>

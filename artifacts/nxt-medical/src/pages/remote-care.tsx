@@ -59,7 +59,7 @@ export default function RemoteCarePage() {
         badge="Remote Care Services"
         headline="One Partner. Three Remote Care Programs."
         subheadline="NXT Medical delivers RPM, CCM, and RTM programs under a single operational model — giving your practice the infrastructure and clinical staff to run them without adding internal burden."
-        primaryCta={{ label: ctas.bookDemo, href: "/contact#demo" }}
+        primaryCta={{ label: ctas.bookDemo, href: ctas.bookDemoHref }}
         secondaryCta={{ label: ctas.contactUs, href: "/contact" }}
       />
 
@@ -174,12 +174,14 @@ export default function RemoteCarePage() {
               NXT Medical helps you model expected reimbursement based on your actual patient panel.
               We also support your billing team with documentation and coding guidance from day one.
             </p>
-            <Link
-              href="/contact#demo"
+            <a
+              href={ctas.bookDemoHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block mt-8 px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
             >
               {ctas.bookDemo}
-            </Link>
+            </a>
           </div>
         </div>
       </section>

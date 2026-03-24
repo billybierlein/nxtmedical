@@ -56,6 +56,7 @@ export const footerLinks = {
 // Primary CTA labels — edit here to update across all pages
 export const ctas = {
   bookDemo: "Book a Demo",
+  bookDemoHref: "https://calendar.app.google/4RY8JiuXDVmfzJrx5",
   contactUs: "Contact Us",
   referPatient: "Refer a Patient",
   learnMore: "Learn More",

@@ -26,7 +26,7 @@ export default function HomePage() {
         badge="Remote Care Programs for Providers"
         headline="Better Patient Care Between Visits"
         subheadline="NXT Medical delivers remote monitoring, care management, and therapeutic support programs — fully staffed and operationally managed, so your practice doesn't have to carry the load."
-        primaryCta={{ label: ctas.bookDemo, href: "/contact#demo" }}
+        primaryCta={{ label: ctas.bookDemo, href: ctas.bookDemoHref }}
         secondaryCta={{ label: "See Our Programs", href: "/remote-care" }}
       />
 
