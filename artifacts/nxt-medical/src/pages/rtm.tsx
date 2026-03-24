@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { CheckCircle2, ScanFace, TrendingUp, ShieldCheck, Gamepad2, BarChart3, Sparkles } from "lucide-react";
+import { CheckCircle2, ScanFace, TrendingUp, ShieldCheck, Gamepad2, BarChart3, Sparkles, Activity, Eye } from "lucide-react";
 import Hero from "@/components/sections/Hero";
 import BenefitsGrid from "@/components/sections/BenefitsGrid";
 import FAQSection from "@/components/sections/FAQSection";
@@ -222,6 +222,60 @@ export default function RTMPage() {
           <p className="mt-12 text-center text-gray-700 text-base font-medium max-w-2xl mx-auto leading-relaxed">
             You get the benefits of advanced remote monitoring — without changing how your practice
             operates.
+          </p>
+        </div>
+      </section>
+
+      {/* Transition: Measurement + Engagement bridge */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="text-primary text-sm font-medium uppercase tracking-wide">
+            Why This Approach Works
+          </span>
+          <h2 className="mt-3 text-xl md:text-2xl font-bold text-gray-900 leading-snug">
+            Better Monitoring Happens When Measurement and Engagement Work Together
+          </h2>
+          <div className="mt-5 space-y-3 text-gray-500 text-[15px] leading-relaxed max-w-2xl mx-auto">
+            <p>Objective data helps show what is happening.</p>
+            <p>Consistent patient participation helps influence what happens next.</p>
+            <p>
+              NXT Medical combines both — giving providers a more complete RTM model built
+              around measurable progress, ongoing engagement, and practical clinical
+              visibility between visits.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+            {[
+              {
+                icon: BarChart3,
+                label: "Measure",
+                text: "Track patient function and response over time using objective technology-supported data.",
+              },
+              {
+                icon: Activity,
+                label: "Engage",
+                text: "Keep patients involved through structured activities designed to support consistency and adherence.",
+              },
+              {
+                icon: Eye,
+                label: "Act",
+                text: "Give providers clearer visibility and better reporting to support timely clinical decisions.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center text-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-primary/8 flex items-center justify-center">
+                  <item.icon size={18} className="text-primary" />
+                </div>
+                <h3 className="font-semibold text-gray-900 text-sm">{item.label}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-10 text-gray-600 text-sm font-medium leading-relaxed">
+            This is what transforms remote monitoring from passive tracking into an active
+            care model.
           </p>
         </div>
       </section>
