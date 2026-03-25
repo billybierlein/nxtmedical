@@ -148,7 +148,7 @@ export default function ForPrimaryCarePage() {
         headline="Increase Medicare Revenue Without Adding Staff Burden"
         subheadline="NXT Medical helps primary care practices implement remote care programs with end-to-end operational support, helping you create recurring revenue while improving patient engagement and ongoing care visibility."
         primaryCta="scheduling"
-        secondaryCta={{ label: "See Our Programs", href: "/remote-care" }}
+        secondaryCta={{ label: "Watch 2-Minute Overview", href: "#video" }}
       />
 
       {/* Hero trust bullets */}
@@ -370,7 +370,38 @@ export default function ForPrimaryCarePage() {
         </div>
       </section>
 
-      {/* 8. FAQ */}
+      {/* 8. Video Section */}
+      <section id="video" className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            Watch the Quick Overview
+          </h2>
+          <p className="mt-3 text-gray-500 text-base max-w-xl mx-auto leading-relaxed">
+            See how the program works, what your practice is responsible for, and how primary care providers are using this to create recurring revenue without adding operational burden.
+          </p>
+
+          <div className="mt-10 relative rounded-2xl overflow-hidden aspect-video">
+            <video
+              className="w-full h-full object-cover rounded-2xl"
+              controls
+              preload="metadata"
+              poster=""
+            >
+              <source
+                src={`${import.meta.env.BASE_URL}videos/primary-care-intro.mp4`}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div className="mt-10">
+            <GoogleSchedulingButton label="Book a Demo" />
+          </div>
+        </div>
+      </section>
+
+      {/* 9. FAQ */}
       <FAQSection faqs={primaryCareFaqs} />
 
       {/* 9. Final CTA */}
