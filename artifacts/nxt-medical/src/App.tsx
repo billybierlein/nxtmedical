@@ -14,6 +14,7 @@ import RTMPage from "@/pages/rtm";
 import AboutPage from "@/pages/about";
 import ContactPage from "@/pages/contact";
 import ForChiropractorsPage from "@/pages/for-chiropractors";
+import ForPrimaryCarePage from "@/pages/for-primary-care";
 import WhoWeServePage from "@/pages/who-we-serve";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/rtm" component={RTMPage} />
       <Route path="/who-we-serve" component={WhoWeServePage} />
       <Route path="/for-chiropractors" component={ForChiropractorsPage} />
+      <Route path="/for-primary-care" component={ForPrimaryCarePage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />

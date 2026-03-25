@@ -120,6 +120,34 @@ export const rtmFaqs = [
   },
 ];
 
+export const primaryCareFaqs = [
+  {
+    question: "Do we need to hire additional staff to run this?",
+    answer:
+      "No. NXT Medical is designed to reduce the operational burden on your internal team by supporting implementation, monitoring workflows, and reporting processes.",
+  },
+  {
+    question: "How involved does the provider need to be?",
+    answer:
+      "The provider maintains oversight, including review of progress reporting, while NXT supports the day-to-day operational structure.",
+  },
+  {
+    question: "Is this built around Medicare workflows?",
+    answer:
+      "Yes. The program is designed to align with Medicare-oriented remote care workflow requirements and documentation expectations.",
+  },
+  {
+    question: "How are patients identified and enrolled?",
+    answer:
+      "NXT helps review eligibility, support outreach and onboarding, and guide the activation process for appropriate patients.",
+  },
+  {
+    question: "How quickly can a practice get started?",
+    answer:
+      "Timing depends on readiness and patient population, but the goal is to make launch straightforward without forcing the practice to build everything internally.",
+  },
+];
+
 export const chiropractorFaqs = [
   {
     question: "Do chiropractors need to manage the remote care program themselves?",

@@ -5,11 +5,18 @@ import Hero from "@/components/sections/Hero";
 
 const providerTypes = [
   {
+    title: "Primary Care Providers",
+    description:
+      "Explore how primary care practices can implement remote care programs with operational support, provider reporting, and recurring revenue potential — without adding staff burden.",
+    href: "/for-primary-care",
+    cta: "View Primary Care Solutions",
+  },
+  {
     title: "Chiropractors",
     description:
       "See how chiropractic clinics can explore remote care programs that support eligible patients and create recurring revenue opportunities without adding major administrative burden.",
     href: "/for-chiropractors",
-    cta: "View Chiropractor Page",
+    cta: "View Chiropractor Solutions",
   },
 ];
 
@@ -29,7 +36,7 @@ export default function WhoWeServePage() {
         badge="Provider Solutions"
         headline="Who We Serve"
         subheadline="NXT Medical supports provider groups looking to expand care delivery, improve patient engagement, and explore scalable operational models."
-        primaryCta={{ label: "Explore Chiropractor Solutions", href: "/for-chiropractors" }}
+        primaryCta={{ label: "Explore Provider Solutions", href: "#providers" }}
         secondaryCta={null}
         size="medium"
       />
@@ -43,13 +50,13 @@ export default function WhoWeServePage() {
           <p className="mt-4 text-gray-500 text-base leading-relaxed">
             Different provider types have different patient populations, workflows,
             and operational needs. Our solutions are designed to align with the
-            realities of each care setting, starting with chiropractic clinics.
+            realities of each care setting.
           </p>
         </div>
       </section>
 
       {/* Provider cards */}
-      <section className="py-20 bg-gray-50">
+      <section id="providers" className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {providerTypes.map((provider, i) => (
@@ -99,12 +106,18 @@ export default function WhoWeServePage() {
             how NXT Medical approaches program support, workflow integration, and
             growth opportunities.
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link
-              href="/for-chiropractors"
+              href="/for-primary-care"
               className="inline-flex px-6 py-3 text-sm font-medium text-white bg-primary hover:bg-primary/90 rounded-lg transition-colors"
             >
-              Explore Chiropractor Solutions
+              Primary Care Solutions
+            </Link>
+            <Link
+              href="/for-chiropractors"
+              className="inline-flex px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 hover:border-primary/20 rounded-lg transition-colors"
+            >
+              Chiropractor Solutions
             </Link>
           </div>
         </div>

@@ -31,6 +31,7 @@ export const navItems = [
     href: "/who-we-serve",
     children: [
       { label: "Who We Serve — Overview", href: "/who-we-serve" },
+      { label: "Primary Care", href: "/for-primary-care" },
       { label: "Chiropractors", href: "/for-chiropractors" },
     ],
   },
@@ -47,6 +48,7 @@ export const footerLinks = {
   ],
   whoWeServe: [
     { label: "Who We Serve — Overview", href: "/who-we-serve" },
+    { label: "Primary Care", href: "/for-primary-care" },
     { label: "Chiropractors", href: "/for-chiropractors" },
   ],
   company: [
