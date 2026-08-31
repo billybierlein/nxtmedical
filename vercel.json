@@ -1,14 +1,26 @@
 {
-  "rewrites": [
-    { "source": "/apps", "destination": "/index.html" },
-    { "source": "/remote-care", "destination": "/index.html" },
-    { "source": "/rpm", "destination": "/index.html" },
-    { "source": "/ccm", "destination": "/index.html" },
-    { "source": "/rtm", "destination": "/index.html" },
-    { "source": "/who-we-serve", "destination": "/index.html" },
-    { "source": "/for-chiropractors", "destination": "/index.html" },
-    { "source": "/for-primary-care", "destination": "/index.html" },
-    { "source": "/about", "destination": "/index.html" },
-    { "source": "/contact", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "artifacts/nxt-medical/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "artifacts/nxt-medical/dist/public"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/apps", "dest": "/index.html" },
+    { "src": "/remote-care", "dest": "/index.html" },
+    { "src": "/rpm", "dest": "/index.html" },
+    { "src": "/ccm", "dest": "/index.html" },
+    { "src": "/rtm", "dest": "/index.html" },
+    { "src": "/who-we-serve", "dest": "/index.html" },
+    { "src": "/for-chiropractors", "dest": "/index.html" },
+    { "src": "/for-primary-care", "dest": "/index.html" },
+    { "src": "/about", "dest": "/index.html" },
+    { "src": "/contact", "dest": "/index.html" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
