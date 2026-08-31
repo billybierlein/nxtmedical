@@ -15,31 +15,9 @@ All content is centralized in the `src/content/` directory:
 | `src/content/site.ts` | Site name, contact details, nav items, footer links, CTA labels |
 | `src/content/services.ts` | RPM, CCM, RTM service descriptions, benefits, process steps, partner benefits |
 | `src/content/faqs.ts` | FAQ arrays organized by page (home, remoteCareOverview, rpm, ccm, rtm) |
-| `src/content/forms.ts` | GoHighLevel form embed codes and form section labels |
 
 **To update copy:** Edit the relevant content file. Components pull from these files at build time.
 Do NOT hardcode copy directly in page or component files.
-
----
-
-## Where Form Embeds Get Inserted
-
-Form embed codes live in `src/content/forms.ts`:
-
-```ts
-export const formEmbeds = {
-  contactForm: "[GHL_CONTACT_FORM_EMBED]",    // General inquiry form
-  bookDemoForm: "[GHL_BOOK_DEMO_FORM_EMBED]",   // Demo scheduling form
-  referPatientForm: "[GHL_REFER_PATIENT_FORM_EMBED]", // Patient referral form
-};
-```
-
-**To add a GHL form embed:** Replace the placeholder string with the actual embed code
-(HTML snippet or iframe src) from your GoHighLevel account. The `FormEmbed` component
-automatically renders the real form when a real embed code is present.
-
-The `FormEmbed` component renders a placeholder state with a clear label while embed codes
-are still placeholder strings — so you'll always know what needs filling in.
 
 ---
 
@@ -72,7 +50,6 @@ All reusable components live in `src/components/`:
 - `Hero.tsx` — Full-width dark hero section with headline, subheadline, and CTAs
 - `ServiceCard.tsx` — Card for displaying a service (RPM/CCM/RTM) with link
 - `FAQSection.tsx` — Accordion FAQ list with heading/subheading
-- `FormEmbed.tsx` — Branded wrapper for GoHighLevel form embeds
 - `CTABand.tsx` — Full-width dark CTA call-to-action strip at bottom of pages
 - `BenefitsGrid.tsx` — Grid of benefit items with icons
 - `ProcessSteps.tsx` — Numbered horizontal step process display
