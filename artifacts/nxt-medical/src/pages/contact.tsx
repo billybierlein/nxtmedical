@@ -1,140 +1,116 @@
 import { Helmet } from "react-helmet-async";
-import { Mail, Phone } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Mail, Phone } from "lucide-react";
 import Hero from "@/components/sections/Hero";
-import FormEmbed from "@/components/sections/FormEmbed";
-import { siteConfig, ctas } from "@/content/site";
+import CTABand from "@/components/sections/CTABand";
+import { siteConfig } from "@/content/site";
+
+const inquiryTypes = [
+  "Remote care program questions",
+  "Practice partnership inquiries",
+  "NXT Labs or app support",
+  "Billing, enrollment, or referral questions",
+];
 
 export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact NXT Medical — Get in Touch or Book a Demo</title>
+        <title>Contact NXT Medical | Call or Email Our Team</title>
         <meta
           name="description"
-          content="Contact NXT Medical to learn about our remote patient care programs, book a demo, or refer a patient. We work with medical practices, clinics, and provider groups."
+          content="Contact NXT Medical by phone or email for remote care program questions, NXT Labs support, app support, partnership inquiries, or company information."
         />
       </Helmet>
 
       <Hero
         size="medium"
         badge="Contact Us"
-        headline="Let's Talk About Your Practice"
-        subheadline="Whether you're exploring remote care programs, ready to get started, or want to refer a patient — we're here to help. Reach out and our team will be in touch promptly."
+        headline="Contact NXT Medical"
+        subheadline="Call or email our team for program questions, product support, partnership inquiries, or company information."
+        primaryCta={{ label: `Call ${siteConfig.contact.phone}`, href: `tel:${siteConfig.contact.phone.replace(/\D/g, "")}` }}
+        secondaryCta={{ label: "Email Us", href: `mailto:${siteConfig.contact.email}` }}
       />
 
-      {/* Contact options + Forms */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Quick contact info */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-14">
-            <div className="flex items-center gap-3 px-5 py-3.5 bg-gray-50 rounded-xl border border-gray-100">
-              <Phone size={16} className="text-primary flex-shrink-0" />
-              <div>
-                <div className="text-xs text-gray-400 font-medium">Phone</div>
-                <div className="text-sm font-medium text-gray-700">{siteConfig.contact.phone}</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 px-5 py-3.5 bg-gray-50 rounded-xl border border-gray-100">
-              <Mail size={16} className="text-primary flex-shrink-0" />
-              <div>
-                <div className="text-xs text-gray-400 font-medium">Email</div>
-                <div className="text-sm font-medium text-gray-700">{siteConfig.contact.email}</div>
-              </div>
-            </div>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-12 items-start">
+            <div>
+              <p className="text-sm font-semibold uppercase text-primary">
+                How to reach us
+              </p>
+              <h2 className="mt-3 text-2xl md:text-3xl font-bold text-gray-900">
+                Call or Email Directly
+              </h2>
+              <p className="mt-4 text-gray-500 text-base leading-relaxed max-w-2xl">
+                We no longer use an embedded contact form on this site. Please contact
+                NXT Medical directly by phone or email and a member of our team will
+                follow up.
+              </p>
 
-          {/* Three form sections */}
-          <div className="space-y-16">
-            {/* General Contact */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <span className="text-primary text-sm font-medium uppercase tracking-wide">
-                  General Inquiry
-                </span>
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">Contact Us</h2>
-                <p className="mt-3 text-gray-500 text-sm leading-relaxed">
-                  Have a question about our programs or want to learn more before committing to a
-                  demo? Fill out the form and we'll get back to you within one business day.
-                </p>
-                <ul className="mt-6 space-y-2">
-                  {[
-                    "Questions about RPM, CCM, or RTM",
-                    "Understanding program eligibility",
-                    "Billing and reimbursement questions",
-                    "Partnership or referral inquiries",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-gray-500 text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="w-full rounded-xl border border-gray-100 overflow-hidden bg-white shadow-sm p-8">
-                <h3 className="text-lg font-semibold text-gray-900">Get in Touch</h3>
-                <p className="mt-2 text-gray-500 text-sm leading-relaxed">
-                  Fill out the form below and a member of our team will be in touch within one business day.
-                </p>
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/form/SkBmrX47puBhwMHYkNZ0"
-                  style={{ width: "100%", height: "1111px", border: "none", borderRadius: "3px" }}
-                  id="inline-SkBmrX47puBhwMHYkNZ0"
-                  data-layout='{"id":"INLINE"}'
-                  data-trigger-type="alwaysShow"
-                  data-activation-type="alwaysActivated"
-                  data-deactivation-type="neverDeactivate"
-                  data-form-name="Contact Us"
-                  data-height="1111"
-                  data-layout-iframe-id="inline-SkBmrX47puBhwMHYkNZ0"
-                  data-form-id="SkBmrX47puBhwMHYkNZ0"
-                  title="Contact Us"
-                />
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\D/g, "")}`}
+                  className="group rounded-2xl border border-gray-100 bg-gray-50 p-6 transition-colors hover:border-primary/30 hover:bg-primary/5"
+                >
+                  <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center">
+                    <Phone size={20} className="text-primary" />
+                  </div>
+                  <div className="mt-5 text-xs font-semibold uppercase text-gray-400">
+                    Phone
+                  </div>
+                  <div className="mt-1 text-lg font-semibold text-gray-900">
+                    {siteConfig.contact.phone}
+                  </div>
+                  <div className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                    Call NXT Medical
+                    <ArrowUpRight size={14} />
+                  </div>
+                </a>
+
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="group rounded-2xl border border-gray-100 bg-gray-50 p-6 transition-colors hover:border-primary/30 hover:bg-primary/5"
+                >
+                  <div className="w-11 h-11 rounded-xl bg-primary/8 flex items-center justify-center">
+                    <Mail size={20} className="text-primary" />
+                  </div>
+                  <div className="mt-5 text-xs font-semibold uppercase text-gray-400">
+                    Email
+                  </div>
+                  <div className="mt-1 text-lg font-semibold text-gray-900 break-all">
+                    {siteConfig.contact.email}
+                  </div>
+                  <div className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                    Email our team
+                    <ArrowUpRight size={14} />
+                  </div>
+                </a>
               </div>
             </div>
 
-            <div className="border-t border-gray-100" />
-
-            {/* Book a Demo */}
-            <div id="demo" className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div>
-                <span className="text-primary text-sm font-medium uppercase tracking-wide">
-                  {ctas.bookDemo}
-                </span>
-                <h2 className="mt-2 text-2xl font-bold text-gray-900">See NXT Medical in Action</h2>
-                <p className="mt-3 text-gray-500 text-sm leading-relaxed">
-                  Schedule a 30-minute walkthrough with our team. We'll cover how RPM, CCM, and RTM
-                  programs work in practice, what we handle on your behalf, and what you can expect
-                  from day one.
-                </p>
-                <ul className="mt-6 space-y-2">
-                  {[
-                    "Live walkthrough of program workflows",
-                    "Enrollment and device logistics overview",
-                    "Billing and reimbursement guidance",
-                    "Revenue modeling for your patient panel",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-gray-500 text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="w-full rounded-xl border border-gray-100 overflow-hidden bg-white shadow-sm">
-                <iframe
-                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0rQ2JLPnfHtutKeUScHA7zCTvaop16jDRzgBD3LDmzCzVbWZy5hsClHuRh5JhLogWx2ScWyC3e?gv=true"
-                  style={{ border: 0 }}
-                  width="100%"
-                  height="600"
-                  title="Schedule a Demo with NXT Medical"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
+            <aside className="rounded-2xl border border-gray-100 bg-gray-50 p-8">
+              <h3 className="text-lg font-semibold text-gray-900">
+                Common reasons to contact us
+              </h3>
+              <ul className="mt-6 space-y-4">
+                {inquiryTypes.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2 size={16} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm leading-relaxed text-gray-600">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </aside>
           </div>
         </div>
       </section>
+
+      <CTABand
+        heading="Need Help from NXT Medical?"
+        subheading="Reach out directly by phone or email for product support, program questions, or company information."
+        primaryCta={{ label: "Email NXT Medical", href: `mailto:${siteConfig.contact.email}` }}
+        secondaryCta={{ label: "Visit NXT Labs", href: "https://www.nxtlabs.us" }}
+      />
     </>
   );
 }
