@@ -16,6 +16,7 @@ import ContactPage from "@/pages/contact";
 import ForChiropractorsPage from "@/pages/for-chiropractors";
 import ForPrimaryCarePage from "@/pages/for-primary-care";
 import WhoWeServePage from "@/pages/who-we-serve";
+import AppsPage from "@/pages/apps";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ function Router() {
       <Route path="/for-chiropractors" component={ForChiropractorsPage} />
       <Route path="/for-primary-care" component={ForPrimaryCarePage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/apps" component={AppsPage} />
       <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
     </Switch>
