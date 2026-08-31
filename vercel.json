@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/apps", "destination": "/index.html" },
+    { "source": "/remote-care", "destination": "/index.html" },
+    { "source": "/rpm", "destination": "/index.html" },
+    { "source": "/ccm", "destination": "/index.html" },
+    { "source": "/rtm", "destination": "/index.html" },
+    { "source": "/who-we-serve", "destination": "/index.html" },
+    { "source": "/for-chiropractors", "destination": "/index.html" },
+    { "source": "/for-primary-care", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" }
+  ]
+}
