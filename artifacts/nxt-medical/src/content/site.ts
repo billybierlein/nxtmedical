@@ -53,6 +53,7 @@ export const footerLinks = {
   ],
   company: [
     { label: "About NXT Medical", href: "/about" },
+    { label: "NXT Medical Apps", href: "/apps" },
     { label: "Contact Us", href: "/contact" },
   ],
 };
